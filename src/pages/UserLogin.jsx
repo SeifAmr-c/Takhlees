@@ -1,30 +1,30 @@
 export default function UserLogin({ navigate }) {
   return (
-    <div className="min-h-screen flex">
-      {/* Left Panel */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-gray-900 to-blue-900 p-12 flex-col justify-center relative overflow-hidden">
+    <div className="min-h-screen flex flex-col lg:flex-row">
+      {/* Left Panel - Hidden on Mobile */}
+      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-gray-900 to-blue-900 p-8 xl:p-12 flex-col justify-center relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
         <div className="relative z-10">
           <div className="flex items-center gap-4 mb-12">
-            <img src="/logo.png" alt="Takhlees" className="h-14 w-auto invert" />
-            <span className="text-3xl font-bold text-white">Takhlees</span>
+            <img src="/Takhlees/logo.png" alt="Takhlees" className="h-12 xl:h-14 w-auto invert" />
+            <span className="text-2xl xl:text-3xl font-bold text-white">Takhlees</span>
           </div>
-          <h1 className="text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl xl:text-5xl font-bold text-white leading-tight mb-6">
             Port Clearance Made Simple
           </h1>
-          <p className="text-xl text-blue-200 leading-relaxed">
+          <p className="text-lg xl:text-xl text-blue-200 leading-relaxed">
             Connect with verified clearance companies across Egyptian ports. Fast, reliable, and transparent.
           </p>
-          <div className="mt-12 p-6 bg-white/10 backdrop-blur rounded-2xl">
+          <div className="mt-12 p-5 xl:p-6 bg-white/10 backdrop-blur rounded-2xl">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-10 xl:w-12 h-10 xl:h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg className="w-5 xl:w-6 h-5 xl:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
               <div>
-                <p className="text-white font-semibold">Trusted by 500+ Importers</p>
-                <p className="text-blue-200 text-sm">Join Egypt's fastest growing platform</p>
+                <p className="text-white font-semibold text-sm xl:text-base">Trusted by 500+ Importers</p>
+                <p className="text-blue-200 text-xs xl:text-sm">Join Egypt's fastest growing platform</p>
               </div>
             </div>
           </div>
@@ -32,81 +32,81 @@ export default function UserLogin({ navigate }) {
       </div>
 
       {/* Right Panel - Login Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-white min-h-screen lg:min-h-0">
         <div className="w-full max-w-md">
           {/* Mobile Logo */}
-          <div className="lg:hidden flex items-center justify-center gap-3 mb-8">
-            <img src="/logo.png" alt="Takhlees" className="h-12 w-auto" />
-            <span className="text-2xl font-bold text-gray-900">Takhlees</span>
+          <div className="lg:hidden flex items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+            <img src="/Takhlees/logo.png" alt="Takhlees" className="h-10 sm:h-12 w-auto" />
+            <span className="text-xl sm:text-2xl font-bold text-gray-900">Takhlees</span>
           </div>
 
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h2>
-            <p className="text-gray-600">Sign in to your account to continue</p>
+          <div className="mb-6 sm:mb-8 text-center lg:text-left">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Welcome Back</h2>
+            <p className="text-sm sm:text-base text-gray-600">Sign in to your account to continue</p>
           </div>
 
-          <form className="space-y-6">
+          <form className="space-y-4 sm:space-y-6">
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+              <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">Email Address</label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
+                  <svg className="w-4 sm:w-5 h-4 sm:h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-0 transition"
+                  className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-3.5 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-0 transition text-sm sm:text-base"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+              <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">Password</label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
+                  <svg className="w-4 sm:w-5 h-4 sm:h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 </div>
                 <input
                   type="password"
                   placeholder="Enter your password"
-                  className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-0 transition"
+                  className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-3.5 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-0 transition text-sm sm:text-base"
                 />
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0">
               <label className="flex items-center gap-2 cursor-pointer">
                 <input type="checkbox" className="w-4 h-4 text-blue-600 rounded border-gray-300" />
-                <span className="text-sm text-gray-600">Remember me</span>
+                <span className="text-xs sm:text-sm text-gray-600">Remember me</span>
               </label>
-              <a href="#" className="text-sm text-blue-600 font-semibold hover:underline">Forgot Password?</a>
+              <a href="#" className="text-xs sm:text-sm text-blue-600 font-semibold hover:underline">Forgot Password?</a>
             </div>
 
             <button
               type="button"
               onClick={() => navigate('user-dashboard')}
-              className="w-full py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition"
+              className="w-full py-3 sm:py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition text-sm sm:text-base"
             >
               Sign In
             </button>
           </form>
 
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-200"></div>
               </div>
-              <div className="relative flex justify-center text-sm">
+              <div className="relative flex justify-center text-xs sm:text-sm">
                 <span className="px-4 bg-white text-gray-500">or continue with</span>
               </div>
             </div>
 
-            <button className="mt-4 w-full py-3.5 border-2 border-gray-200 rounded-xl font-semibold text-gray-700 hover:bg-gray-50 transition flex items-center justify-center gap-3">
-              <svg className="w-5 h-5" viewBox="0 0 24 24">
+            <button className="mt-4 w-full py-3 sm:py-3.5 border-2 border-gray-200 rounded-xl font-semibold text-gray-700 hover:bg-gray-50 transition flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base">
+              <svg className="w-4 sm:w-5 h-4 sm:h-5" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                 <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                 <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
@@ -116,15 +116,15 @@ export default function UserLogin({ navigate }) {
             </button>
           </div>
 
-          <p className="mt-8 text-center text-gray-600">
+          <p className="mt-6 sm:mt-8 text-center text-sm sm:text-base text-gray-600">
             Don't have an account?{' '}
             <button onClick={() => navigate('user-register')} className="text-blue-600 font-semibold hover:underline">
               Register Here
             </button>
           </p>
 
-          <p className="mt-4 text-center">
-            <button onClick={() => navigate('landing')} className="text-gray-500 hover:text-gray-700 text-sm">
+          <p className="mt-3 sm:mt-4 text-center">
+            <button onClick={() => navigate('landing')} className="text-gray-500 hover:text-gray-700 text-xs sm:text-sm">
               ← Back to Home
             </button>
           </p>
